@@ -1,0 +1,15 @@
+.header-section {
+    margin: 0;
+    height: 4rem;
+    background-color: #4caf50 !important;
+}
+.title {
+    text-align: center;
+}
+.app-name{
+    display: inline-block;
+    width: 50%; 
+    font-size: 22px;
+    line-height: 30px;
+    color: white;
+}

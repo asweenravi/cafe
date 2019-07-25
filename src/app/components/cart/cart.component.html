@@ -1,0 +1,16 @@
+<div class="back-button" (click)="navigateToHome()">
+  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#000000" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+  </svg>
+</div>
+<app-header></app-header>
+<div *ngIf="cart.length == 0">No items in cart</div>
+<div class="cart-container">
+    <div class="col-sm-3 recipe-item"  *ngFor="let item of cart; let i = index;">
+        <div class="recipe-image" (click)="openDetails(i)"><img  src="{{item.image}}" alt=""></div>
+      <div class="details" >
+          <p class="recipe-title">{{item.name}}</p>
+          <p class="recipe-price">₹ {{item.price}}</p>
+        </div>
+    </div>
+  </div>

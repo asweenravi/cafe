@@ -1,0 +1,34 @@
+.recipe-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.details {
+    display: inline-block;
+}
+
+.order-item {
+    float: right;
+    color: #4caf50;
+}
+
+.rating {
+    float: right;
+}
+
+.back-button {
+    position: absolute;
+    margin: 20px;
+}
+
+
+.order-item {
+    background-color: #4caf50;
+    color: white;
+    float: right;
+    margin: 35px 20px 0 0;
+    height: 27px;
+    border: none;
+    border-radius: 2px;
+}

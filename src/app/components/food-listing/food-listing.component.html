@@ -1,0 +1,32 @@
+<section class="food-listing-section">
+  <div class="search-field">
+    <input type="text" [(ngModel)]="inputText" (keyup)="searchKeyWord()" placeholder="Search for a particular dish or ingredient">
+  </div>
+  <div class="filter-icon" (click)="activeCategory = '';inputText = '' ;searchKeyWord()"> 
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="#000000" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
+      </svg> Clear filter
+  </div>
+  <h3 class="page-title">SELECT CATEGORIES</h3>
+  <div class="categories-container">
+    <div class="category-item" (click)="activeCategory = item.name; searchKeyWord()" *ngFor="let item of categories">
+      <span class="block">
+        <img class="category-image" src="{{item.image}}" alt="">
+      </span>
+      <span class="block">
+        <p class="category-title">{{item.name}}</p>
+      </span>
+    </div>
+  </div>
+  <div class="recipes-container">
+    <div class="col-sm-3 recipe-item"  *ngFor="let item of recipes; let i = index;">
+        <div class="recipe-image" (click)="openDetails(i)"><img  src="{{item.image}}" alt=""></div>
+      <div class="details" >
+          <p class="recipe-title">{{item.name}}</p>
+          <p class="recipe-price">₹ {{item.price}}</p>
+        </div>
+
+        <button class="order-item" (click)="addToCart(item);">ADD TO BAG</button>
+    </div>
+  </div>
+</section>

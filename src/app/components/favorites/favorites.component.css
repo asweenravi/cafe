@@ -1,0 +1,36 @@
+.fav-items-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.fav-item {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.item-image img {
+  height: 200px;
+  width: 200px;
+}
+
+.item-title {
+    width: 120px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-item{
+    background-color: #4caf50;
+    color: white;
+    height: 27px;
+    border: none;
+    border-radius: 2px;
+}
+
+.cart-icon {
+  float: right;
+  margin-right: 10px;
+}
